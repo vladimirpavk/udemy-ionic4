@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipesService } from '../services/recipes.service';
 
 @Component({
   selector: 'app-recipes',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesPage implements OnInit {
 
-  constructor() { }
+  constructor(private _recipesService: RecipesService) { }
 
   ngOnInit() {
+    /*console.log(
+      this._recipesService.getRecipes()
+    )*/
+  }
+  
+  private itemClicked(eventData){
+    console.log(eventData);
   }
 
 }
