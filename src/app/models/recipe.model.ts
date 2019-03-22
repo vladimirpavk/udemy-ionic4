@@ -5,7 +5,7 @@ export interface Recipe{
         public imageUrl: string,
         public ingridients: string[]
     ){}*/
-    id: number;
+    id: any;
     title: string;
     imageUrl: string;
     ingridients: string[];
