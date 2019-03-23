@@ -2,7 +2,6 @@ import { Injectable, OnInit } from "@angular/core";
 import { Recipe } from '../models/recipe.model';
 import * as shortid from 'shortid';
 import { Observable, Subject } from 'rxjs';
-import { REPLServer } from 'repl';
 
 @Injectable()
 export class RecipesService{
@@ -40,12 +39,13 @@ export class RecipesService{
         return [...this._recipes];
     }
 
-    public getRecipe(id:number):Recipe{
-        return this._recipes.find(
-            (recipe:Recipe)=>{
-                return recipe.id === id;
+    public getRecipe(id:any):Recipe{        
+        let foundRecipe = this._recipes.find(
+            (recipe:Recipe)=>{                
+                return recipe.id == id;
             }
-        )
+        );                        
+        return foundRecipe;
     }
  
     public removeRecipe(id:number):void{
