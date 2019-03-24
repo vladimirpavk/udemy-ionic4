@@ -1,5 +1,13 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/recipes"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onDeleteButtonClicked()">
+          <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Recipe detail</ion-title>
   </ion-toolbar>
 </ion-header>

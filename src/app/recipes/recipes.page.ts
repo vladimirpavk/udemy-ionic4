@@ -15,14 +15,9 @@ export class RecipesPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    /*console.log(
-      this._recipesService.getRecipes()
-    )*/
   }
   
   private itemClicked(eventData){
-    //console.log(eventData); 
-    this._router.navigate(['/recipes', eventData]);
   }
 
 }
